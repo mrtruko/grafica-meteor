@@ -1,0 +1,135 @@
+.content {
+	margin-top: 50px;
+}
+.undecorated-link:hover {
+	text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+
+td {
+  word-break: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.tt-menu {
+  width: 422px;
+  margin: 12px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+.tt-menu, .gist {
+  text-align: left;
+}
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0097cf;
+}
+.league-name {
+  margin: 0 20px 5px 20px;
+  padding: 3px 0;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+
+#cantidad .error-span {
+  display: none !important;
+}
+@media print {
+ #header {
+  display: none;
+}
+ul.nav.nav-pills.nav-justified.steps {
+  display: none;
+}
+.box-title {
+  display: none;
+}
+
+#sidebar {
+  display: none;
+}
+
+.page-header {
+  display: none;
+}
+
+.box-title {
+  display: none;
+}
+
+.footer-tools {
+  display: none;
+}
+
+.btn-success {
+  display: none;
+}
+
+
+#content {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+
+}
+* {
+  font-size: 97% !important;
+}
+#main-content {
+  margin-left: 0px !important;
+  border: none;
+}
+.col-sm-12.well {
+  background-color: rgba(245, 245, 245, 0) !important;
+  border: 0px !important;
+  border-left: 0px !important;
+}
+.box-body {
+  padding: 0px !important;
+  margin-top: -25px;
+}
+.separator {
+display: none;
+
+}
+.well.ng-binding {
+  background-color: rgba(245, 245, 245, 0) !important;
+  border: 0px !important;
+  border-left: 0px !important;
+}
+.wizard-buttons{
+
+  display: none;
+}
+.box.border.red {
+  border: 1px solid #d43f3a;
+}
+.invoice-title.text-muted {
+  margin-bottom: 5px;
+}
+#btnImprimir{
+  display: none;
+}
+}

@@ -1,0 +1,569 @@
+
+		<div class="container" data-ng-controller="HeaderController" data-ng-init="comun()" data-ng-show="authentication.user">
+				<div class="navbar-brand">
+					<!-- COMPANY LOGO -->
+					<a href="/#!/">
+						<img src="/modules/core/img/logo/logo.png" alt="Cloud Admin Logo" class="img-responsive" height="30" width="120">
+					</a>
+					<!-- /COMPANY LOGO -->
+					<!-- TEAM STATUS FOR MOBILE -->
+					<div class="visible-xs">
+						<a href="#" class="team-status-toggle switcher btn dropdown-toggle">
+							<i class="fa fa-users"></i>
+						</a>
+					</div>
+					<!-- /TEAM STATUS FOR MOBILE -->
+					<!-- SIDEBAR COLLAPSE -->
+					<div id="sidebar-collapse" class="sidebar-collapse btn">
+						<i class="fa fa-bars" 
+							data-icon1="fa fa-bars" 
+							data-icon2="fa fa-bars" ></i>
+					</div>
+					<!-- /SIDEBAR COLLAPSE -->
+				</div>
+				<!-- NAVBAR LEFT -->
+				<ul class="nav navbar-nav pull-left hidden-xs" id="navbar-left">
+					<li class="dropdown">
+						<a href="#" class="team-status-toggle dropdown-toggle tip-bottom" data-toggle="tooltip" title="Toggle Team View">
+							<i class="fa fa-users"></i>
+							<span class="name">Estado del Equipo</span>
+							<i class="fa fa-angle-down"></i>
+						</a>
+					</li>
+					
+				</ul>
+				<!-- /NAVBAR LEFT -->
+				<!-- BEGIN TOP NAVIGATION MENU -->					
+				<ul class="nav navbar-nav pull-right">
+					<!-- BEGIN NOTIFICATION DROPDOWN -->	
+					<li class="dropdown" id="header-notification">
+						<a href="#" class="dropdown-toggle" >
+							<i class="fa fa-bell"></i>
+							<span class="badge">7</span>						
+						</a>
+						<ul class="dropdown-menu notification">
+							<li class="dropdown-title">
+								<span><i class="fa fa-bell"></i> Ejemplo</span>
+							</li>
+							<li>
+								<a href="#">
+									<span class="label label-success"><i class="fa fa-user"></i></span>
+									<span class="body">
+										<span class="message">Ejemplo </span>
+										<span class="time">
+											<i class="fa fa-clock-o"></i>
+											<span>Ejemplo</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<li class="footer">
+								<a href="#">Todo las Notificaciones <i class="fa fa-arrow-circle-right"></i></a>
+							</li>
+						</ul>
+					</li>
+					<!-- END NOTIFICATION DROPDOWN -->
+					<!-- BEGIN INBOX DROPDOWN -->
+					<li class="dropdown" id="header-message">
+						<a href="#" class="dropdown-toggle">
+						<i class="fa fa-envelope"></i>
+						<span class="badge">3</span>
+						</a>
+						<ul class="dropdown-menu inbox">
+							<li class="dropdown-title">
+								<span><i class="fa fa-envelope-o"></i> Ejemplo</span>
+								<span class="compose pull-right tip-right" title="Compose message"><i class="fa fa-pencil-square-o"></i></span>
+							</li>
+							<li>
+								<a href="#">
+									<img src="/modules/core/img/avatars/avatar8.jpg" alt="" />
+									<span class="body">
+										<span class="from">USUARIO</span>
+										<span class="message">
+										Ejemplo
+										</span> 
+										<span class="time">
+											<i class="fa fa-clock-o"></i>
+											<span>Ejemplo</span>
+										</span>
+									</span>
+									 
+								</a>
+							</li>
+							<li class="footer">
+								<a href="#">Todos los Mensajes <i class="fa fa-arrow-circle-right"></i></a>
+							</li>
+						</ul>
+					</li>
+					<!-- END INBOX DROPDOWN -->
+					<!-- BEGIN TODO DROPDOWN -->
+					<li class="dropdown" id="header-tasks">
+						<a href="#" class="dropdown-toggle">
+						<i class="fa fa-tasks"></i>
+						<span class="badge">3</span>
+						</a>
+						<ul class="dropdown-menu tasks">
+							<li class="dropdown-title">
+								<span><i class="fa fa-check"></i> Ejemplo</span>
+							</li>
+							<li>
+								<a href="#">
+									<span class="header clearfix">
+										<span class="pull-left">Ejemplo</span>
+										<span class="pull-right">60%</span>
+									</span>
+									<div class="progress">
+									  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+										<span class="sr-only">60% Completado</span>
+									  </div>
+									</div>
+								</a>
+                            </li>
+							<li>
+								<a href="#">
+									<span class="header clearfix">
+										<span class="pull-left">Ejemplo</span>
+										<span class="pull-right">65%</span>
+									</span>
+									<div class="progress">
+									  <div class="progress-bar progress-bar-success" style="width: 35%">
+										<span class="sr-only">35% Completado</span>
+									  </div>
+									  <div class="progress-bar progress-bar-warning" style="width: 20%">
+										<span class="sr-only">20% Completado</span>
+									  </div>
+									  <div class="progress-bar progress-bar-danger" style="width: 10%">
+										<span class="sr-only">10% Completado</span>
+									  </div>
+									</div>
+								</a>
+							</li>
+							<li class="footer">
+								<a href="#">Ver Todas las Tareas <i class="fa fa-arrow-circle-right"></i></a>
+							</li>
+						</ul>
+					</li>
+					<!-- END TODO DROPDOWN -->
+					<!-- BEGIN USER LOGIN DROPDOWN -->
+					<li class="dropdown user" id="header-user">
+						<a href="#" class="dropdown-toggle">
+							<img alt="" src="/modules/core/img/avatars/avatar3.jpg" />
+							<span id="Usuario" class="username" data-ng-bind="authentication.user.displayName">Administrador</span>
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/#!/settings/profile"><i class="fa fa-user"></i> Mi Perfil</a></li>
+						
+							<li><a href="/auth/signout"><i class="fa fa-power-off"></i> Cerrar Sesión</a></li>
+						</ul>
+					</li>
+					<!-- END USER LOGIN DROPDOWN -->
+				</ul>
+				<!-- END TOP NAVIGATION MENU -->
+		</div>
+		<!-- TEAM STATUS -->
+		<div class="container team-status" id="team-status">
+		  <div id="scrollbar">
+			<div class="handle">
+			</div>
+		  </div>
+		 <div id="teamslider">
+			  <ul class="team-list">
+				<li class="current">
+				  <a href="javascript:void(0);">
+				  <span class="image">
+					  <img src="/modules/core/img/avatars/avatar3.jpg" alt="" />
+				  </span>
+				  <span class="title">
+					You
+				  </span>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-success" style="width: 35%">
+						<span class="sr-only">35% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-warning" style="width: 20%">
+						<span class="sr-only">20% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-danger" style="width: 10%">
+						<span class="sr-only">10% Completado</span>
+					  </div>
+					</div>
+					<span class="status">
+						<div class="field">
+							<span class="badge badge-green">6</span> Completado
+							<span class="pull-right fa fa-check"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-orange">3</span> En Progreso
+							<span class="pull-right fa fa-adjust"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-red">1</span> Pendiente
+							<span class="pull-right fa fa-list-ul"></span>
+						</div>
+				    </span>
+				  </a>
+				</li>
+				<li>
+				  <a href="javascript:void(0);">
+				  <span class="image">
+					  <img src="/modules/core/img/avatars/avatar1.jpg" alt="" />
+				  </span>
+				  <span class="title">
+					Max Doe
+				  </span>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-success" style="width: 15%">
+						<span class="sr-only">35% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-warning" style="width: 40%">
+						<span class="sr-only">20% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-danger" style="width: 20%">
+						<span class="sr-only">10% Completado</span>
+					  </div>
+					</div>
+					<span class="status">
+						<div class="field">
+							<span class="badge badge-green">2</span> Completado
+							<span class="pull-right fa fa-check"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-orange">8</span> En Progreso
+							<span class="pull-right fa fa-adjust"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-red">4</span> Pendiente
+							<span class="pull-right fa fa-list-ul"></span>
+						</div>
+				    </span>
+				  </a>
+				</li>
+				<li>
+				  <a href="javascript:void(0);">
+				  <span class="image">
+					  <img src="/modules/core/img/avatars/avatar2.jpg" alt="" />
+				  </span>
+				  <span class="title">
+					Jane Doe
+				  </span>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-success" style="width: 65%">
+						<span class="sr-only">35% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-warning" style="width: 10%">
+						<span class="sr-only">20% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-danger" style="width: 15%">
+						<span class="sr-only">10% Completado</span>
+					  </div>
+					</div>
+					<span class="status">
+						<div class="field">
+							<span class="badge badge-green">10</span> Completado
+							<span class="pull-right fa fa-check"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-orange">3</span> En Progreso
+							<span class="pull-right fa fa-adjust"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-red">4</span> Pendiente
+							<span class="pull-right fa fa-list-ul"></span>
+						</div>
+				    </span>
+				  </a>
+				</li>
+				<li>
+				  <a href="javascript:void(0);">
+				  <span class="image">
+					  <img src="/modules/core/img/avatars/avatar4.jpg" alt="" />
+				  </span>
+				  <span class="title">
+					Ellie Doe
+				  </span>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-success" style="width: 5%">
+						<span class="sr-only">35% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-warning" style="width: 48%">
+						<span class="sr-only">20% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-danger" style="width: 27%">
+						<span class="sr-only">10% Completado</span>
+					  </div>
+					</div>
+					<span class="status">
+						<div class="field">
+							<span class="badge badge-green">1</span> Completado
+							<span class="pull-right fa fa-check"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-orange">6</span> En Progreso
+							<span class="pull-right fa fa-adjust"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-red">2</span> Pendiente
+							<span class="pull-right fa fa-list-ul"></span>
+						</div>
+				    </span>
+				  </a>
+				</li>
+				<li>
+				  <a href="javascript:void(0);">
+				  <span class="image">
+					  <img src="/modules/core/img/avatars/avatar5.jpg" alt="" />
+				  </span>
+				  <span class="title">
+					Lisa Doe
+				  </span>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-success" style="width: 21%">
+						<span class="sr-only">35% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-warning" style="width: 20%">
+						<span class="sr-only">20% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-danger" style="width: 40%">
+						<span class="sr-only">10% Completado</span>
+					  </div>
+					</div>
+					<span class="status">
+						<div class="field">
+							<span class="badge badge-green">4</span> Completado
+							<span class="pull-right fa fa-check"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-orange">5</span> En Progreso
+							<span class="pull-right fa fa-adjust"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-red">9</span> Pendiente
+							<span class="pull-right fa fa-list-ul"></span>
+						</div>
+				    </span>
+				  </a>
+				</li>
+				<li>
+				  <a href="javascript:void(0);">
+				  <span class="image">
+					  <img src="/modules/core/img/avatars/avatar6.jpg" alt="" />
+				  </span>
+				  <span class="title">
+					Kelly Doe
+				  </span>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-success" style="width: 45%">
+						<span class="sr-only">35% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-warning" style="width: 21%">
+						<span class="sr-only">20% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-danger" style="width: 10%">
+						<span class="sr-only">10% Completado</span>
+					  </div>
+					</div>
+					<span class="status">
+						<div class="field">
+							<span class="badge badge-green">6</span> Completado
+							<span class="pull-right fa fa-check"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-orange">3</span> En Progreso
+							<span class="pull-right fa fa-adjust"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-red">1</span> Pendiente
+							<span class="pull-right fa fa-list-ul"></span>
+						</div>
+				    </span>
+				  </a>
+				</li>
+				<li>
+				  <a href="javascript:void(0);">
+				  <span class="image">
+					  <img src="/modules/core/img/avatars/avatar7.jpg" alt="" />
+				  </span>
+				  <span class="title">
+					Jessy Doe
+				  </span>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-success" style="width: 7%">
+						<span class="sr-only">35% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-warning" style="width: 30%">
+						<span class="sr-only">20% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-danger" style="width: 10%">
+						<span class="sr-only">10% Completado</span>
+					  </div>
+					</div>
+					<span class="status">
+						<div class="field">
+							<span class="badge badge-green">1</span> Completado
+							<span class="pull-right fa fa-check"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-orange">6</span> En Progreso
+							<span class="pull-right fa fa-adjust"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-red">2</span> Pendiente
+							<span class="pull-right fa fa-list-ul"></span>
+						</div>
+				    </span>
+				  </a>
+				</li>
+				<li>
+				  <a href="javascript:void(0);">
+				  <span class="image">
+					  <img src="/modules/core/img/avatars/avatar8.jpg" alt="" />
+				  </span>
+				  <span class="title">
+					Debby Doe
+				  </span>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-success" style="width: 70%">
+						<span class="sr-only">35% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-warning" style="width: 20%">
+						<span class="sr-only">20% Completado</span>
+					  </div>
+					  <div class="progress-bar progress-bar-danger" style="width: 5%">
+						<span class="sr-only">10% Completado</span>
+					  </div>
+					</div>
+					<span class="status">
+						<div class="field">
+							<span class="badge badge-green">13</span> Completado
+							<span class="pull-right fa fa-check"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-orange">7</span> En Progreso
+							<span class="pull-right fa fa-adjust"></span>
+						</div>
+						<div class="field">
+							<span class="badge badge-red">1</span> Pendiente
+							<span class="pull-right fa fa-list-ul"></span>
+						</div>
+				    </span>
+				  </a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+
+		  <div id="sidebar" class="sidebar">
+					<div class="sidebar-menu nav-collapse">
+						<div class="divide-20"></div>
+						<!-- SEARCH BAR -->
+						<div id="search-bar">
+							<input class="search" type="text" placeholder="Search"><i class="fa fa-search search-icon"></i>
+						</div>
+						<!-- /SEARCH BAR -->
+						
+						<!-- SIDEBAR QUICK-LAUNCH -->
+						<!-- <div id="quicklaunch">
+						/SIDEBAR QUICK-LAUNCH -->
+
+						<!-- SIDEBAR MENU -->
+						<ul>
+							<li class="active">
+								<a href="/#!/">
+								<i class="fa fa-tachometer fa-fw"></i> <span class="menu-text">Inicio</span>
+								<span class="selected"></span>
+								</a>					
+							</li>
+
+							<li class="has-sub">
+								<a href="javascript:;" class="">
+								<i class="fa fa-users fa-fw"></i> <span class="menu-text">Clientes</span>
+								<span class="arrow"></span>
+								</a>
+								<ul class="sub">
+									
+									<li><a class="" href="/#!/agenda"><span class="sub-menu-text"><i class="fa fa-book fa-fw"></i>Agenda de Clientes</span></a></li>
+
+									<li><a class="" href="/#!/clientes"><span class="sub-menu-text"><i class="fa fa-users fa-fw"></i>Lista de Clientes</span></a></li>
+
+									<li><a class="" href="/#!/agenda/empresa"><span class="sub-menu-text"><i class="fa fa-book fa-fw"></i>Agenda de Empresas</span></a></li>
+									<li><a class="" href="/#!/empresas"><span class="sub-menu-text"><i class="fa fa-building-o fa-fw"></i>Lista de Empresas</span></a></li>
+									
+									
+								</ul>
+							</li>
+
+
+						
+							<li class="has-sub">
+								<a href="/#!/productos">	
+								<i class="fa fa-dropbox fa-fw"></i> <span class="menu-text">Bodega</span>
+								
+								</a>
+								
+							</li>
+						
+							<li class="has-sub">
+								<a href="javascript:;" class="">
+								<i class="fa fa-pencil-square-o fa-fw"></i> <span class="menu-text">Ordenes</span>
+								<span class="arrow"></span>
+								</a>
+								<ul class="sub">
+									
+									<li><a class="" href="/#!/ordenes/create"><span class="sub-menu-text">Orden de Pedido</span></a></li>
+									<li><a class="" href="/#!/ordenes"><span class="sub-menu-text">Orden de Trabajo</span></a></li>
+									
+									
+								</ul>
+							</li>
+							
+						
+							
+							<li class="has-sub">
+								<a href="/#!/usuarios">
+								<i class="fa fa-user fa-fw"></i> <span class="menu-text">Usuarios</span>
+								
+								</a>
+							</li>
+							
+						</ul>
+						<!-- /SIDEBAR MENU -->
+					</div>
+				</div>
+				<div class="row">
+							<div class="chat-widget" data-ng-controller="HeaderController">
+								<div class="col-md-12">
+									<!-- BOX -->
+									<div class="box border red">
+										<div class="box-title">
+											<h4><i class="fa fa-comment"></i>Chat Widget</h4>
+											<div class="tools">
+												<a href="javascript:;" class="expand">
+													<i class="fa fa-chevron-down"></i>
+												</a>
+												<a href="javascript:;" class="remove">
+													<i class="fa fa-times"></i>
+												</a>
+											</div>
+										</div>
+										<div class="box-body" style="display:none">
+											<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 350px;"><div class="scroller" data-height="350px" data-always-visible="1" data-rail-visible="1" style="overflow: auto; width: auto; height: 350px;">
+												<ul id="list-mensajes" class="media-list chat-list">
+													
+												</ul>
+											</div><div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; background: rgb(161, 178, 189);"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: block; border-radius: 7px; opacity: 0.1; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+											<div class="divide-20"></div>
+											<form  onsubmit="msg()" role="form">
+											<div class="chat-form">
+												<div class="input-group"> 
+													<input placeholder="Ingrese Mensaje" type="text" id="msgInput" class="form-control" > 
+													<span class="input-group-btn"> <button class="btn btn-primary" type="submit"><i class="fa fa-check"></i></button> </span> 
+												</div>
+											</div>
+											</form>
+										</div>
+									</div>
+									<!-- /BOX -->
+								</div>
+							</div>
+						</div>
